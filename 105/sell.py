@@ -10,7 +10,7 @@ def sell(ticker: str = "AAPL"):
 
 if __name__ == "__main__":
     sell.from_source(
-        source="https://github.com/discdiver/pacc-2024.git",
+        source="https://github.com/discdiver/pacc-2024-v2.git",
         entrypoint="106/sell.py:sell",
     ).deploy(
         name="selling-deployment",
