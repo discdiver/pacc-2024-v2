@@ -3,7 +3,7 @@ from prefect import flow
 
 if __name__ == "__main__":
     flow.from_source(
-        source="https://github.com/discdiver/pacc-2024.git",
+        source="https://github.com/discdiver/pacc-2024-v2.git",
         entrypoint="102/weather2-tasks.py:pipeline",
     ).deploy(
         name="my-first-managed-deployment",
