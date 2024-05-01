@@ -1,5 +1,5 @@
 from prefect import flow
-from prefect.events.schemas import DeploymentTrigger
+from prefect.events.schemas import DeploymentEventTrigger
 
 
 @flow(log_prints=True)
@@ -7,7 +7,7 @@ def downstream_flow(ticker: str = "AAPL") -> str:
     print(f"got {ticker}")
 
 
-downstream_deployment_trigger = DeploymentTrigger(
+downstream_deployment_trigger = DeploymentEventTrigger(
     name="Upstream Flow - Pipeline",
     enabled=True,
     match_related={
