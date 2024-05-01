@@ -20,7 +20,7 @@ downstream_deployment_trigger = DeploymentTrigger(
 if __name__ == "__main__":
     downstream_flow.from_source(
         source="https://github.com/discdiver/pacc-2024-v2.git",
-        entrypoint="106/deployment-trigger.py:downstream_flow",
+        entrypoint="105/deployment-trigger.py:downstream_flow",
     ).deploy(
         name="ticker-deploy",
         work_pool_name="managed1",
